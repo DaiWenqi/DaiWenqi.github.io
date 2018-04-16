@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="戴文琪个人博客">
 <meta property="og:description" content="第一步安装npm install -g hexo-cli 第二步：建站hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt; npm install 写文章hexo new [layout] &amp;lt;title&amp;gt; hexo new draft &amp;quot;测试&amp;quot; 写草稿hexo new draft &amp;quot;测试draft&amp;quot;      写草">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-04-16T07:23:08.890Z">
+<meta property="og:updated_time" content="2018-04-16T08:26:39.118Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo使用">
 <meta name="twitter:description" content="第一步安装npm install -g hexo-cli 第二步：建站hexo init &amp;lt;folder&amp;gt; cd &amp;lt;folder&amp;gt; npm install 写文章hexo new [layout] &amp;lt;title&amp;gt; hexo new draft &amp;quot;测试&amp;quot; 写草稿hexo new draft &amp;quot;测试draft&amp;quot;      写草">
@@ -94,7 +94,29 @@ npm install
 hexo new draft &quot;测试&quot;
 </code></pre><h3 id="写草稿"><a href="#写草稿" class="headerlink" title="写草稿"></a>写草稿</h3><pre><code>hexo new draft &quot;测试draft&quot;      写草稿
 hexo publish draft &quot;测试draft&quot;  发布草稿
-</code></pre><p>配置文件在_config.yml 中查看</p>
+</code></pre><h3 id="配置文件在-config-yml-中查看"><a href="#配置文件在-config-yml-中查看" class="headerlink" title="配置文件在_config.yml 中查看"></a>配置文件在_config.yml 中查看</h3><pre><code>配置好git仓库
+deploy:
+    type: git
+    repo: git@github.com:DaiWenqi/DaiWenqi.github.io.git
+</code></pre><h3 id="生成静态"><a href="#生成静态" class="headerlink" title="生成静态"></a>生成静态</h3><pre><code>hexo generate
+</code></pre><p>###　部署<br>    hexo deploy</p>
+<blockquote>
+<p>说明：一般生成文件跟静态连用 hexo generate –deploy 缩写 hexo g -d</p>
+</blockquote>
+<h3 id="备份源码流程"><a href="#备份源码流程" class="headerlink" title="备份源码流程"></a>备份源码流程</h3><pre><code>git init
+git add 需要备份的文件
+git commit -m &apos;hexo使用&apos;
+git push origin blog  关联        提交到远端仓库
+</code></pre><h3 id="检查源码修改并提交"><a href="#检查源码修改并提交" class="headerlink" title="检查源码修改并提交"></a>检查源码修改并提交</h3><pre><code>git status
+
+use &quot;git add/rm &lt;file&gt;...&quot; to update what will be committed
+选择需要跟踪的文件git
+
+git commit -m &quot;描述&quot;    提交到本地仓库
+</code></pre><blockquote>
+<p><a href="http://www.bootcss.com/p/git-guide/" target="_blank" rel="noopener">git - 简易指南</a></p>
+</blockquote>
+<p>配置文件在_config.yml 中查看</p>
 
       
     </div>
